@@ -12,7 +12,7 @@ int main() {
     cin >> qtd;
     
     if (qtd > 5){
-        cin >> qtd;
+    qtd = 5;
     }
     
   for (int i = 0; i < qtd; i++) {
