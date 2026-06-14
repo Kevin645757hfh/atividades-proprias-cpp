@@ -1,36 +1,61 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 using namespace std;
 int main() {
-    string nome;
-    float notas[3], media = 0;
+    string nomes[40], situacao[40], nome;
+    float media[40];
+    int qtdalunos = 0;
+    
+    while (qtdalunos < 40) {
+        cout << "Digite o nome do aluno (ou 'ALUNOS' para sair): ";
+        cin >> nome;
+        
+        if (nome == "ALUNOS") {
+            break;
+        }
+        nomes[qtdalunos] = nome;
+        
+        float notas[3];
+        float soma = 0;
+        
+        for (int i = 0; i < 3; i++) {
+            cout << "Digite a nota" << i + 1 << ": ";
+            cin >> notas [i];
+            
+            soma += notas[i];
+        
+        }
+      media[qtdalunos] = soma / 3;
+        
+        
+        
+           
+        if (media[qtdalunos] >= 7) { 
+            situacao[qtdalunos] = "Aprovado";
+        }
+        else if (media[qtdalunos] >= 5) { 
+            situacao[qtdalunos] = "Recuperacao";
+        }
+        else {
+            situacao[qtdalunos] = "Reprovado";
+        }
 
-    cout << "Digite seu nome: \n";
-    cin >> nome;
-    
-    system ("clear");
-    
-    for (int i = 0; i < 3; i++) {
-    cout << "Digite as notas: \n";
-    cin >> notas[i];
-    
-    media += notas[i];
-    
+        cout << "\nAluno: " << nomes[qtdalunos];
+        cout << "\nMedia: " << media[qtdalunos]; 
+        cout << "\nSituacao: " << situacao[qtdalunos] << endl;
+
+        qtdalunos++;
     }
-    media = media / 3;
     
-    cout << "Média: \n" << media;
+    cout << "====TODOS OS ALUNOS====";
     
-     if (media >= 7) {
-        cout << "\nAprovado";
+    for(int i =0; i < qtdalunos; i++) {
+        
+        cout << "\nalunos: " << nomes[i];
+        cout << "\nmédia: " << media[i];
+        cout << "\nsituação: " << situacao[i];
+        cout << "\n------------";
     }
-    else if (media >= 5 && media <= 6.9) {
-        cout << "\nRecuperação";
-    }
-        else if (media < 5 ) {
-        cout << "\nReprovado";
-    }
-     
+
     return 0;
 }
