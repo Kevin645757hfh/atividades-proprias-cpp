@@ -84,36 +84,48 @@ int main() {
         if (tentativa == 1) { // depois do 2º erro
             cout << "\nNova dica: ";
 
-            if (sorteio == 0)
+            if (sorteio == 0) {
                 cout << dica1[1];
-            else if (sorteio == 1)
+            }
+            else if (sorteio == 1) {
                 cout << dica2[1];
-            else if (sorteio == 2)
+            }
+            else if (sorteio == 2) {
                 cout << dica3[1];
-            else if (sorteio == 3)
+            }
+            else if (sorteio == 3) {
                 cout << dica4[1];
-            else if (sorteio == 4)
+            }
+            else if (sorteio == 4) {
                 cout << dica5[1];
-            else
+            }
+            else {
                 cout << dica6[1];
+            }
         }
 
 
         if (tentativa == 2) { // depois do 3º erro
             cout << "\nÚltima dica: ";
 
-            if (sorteio == 0)
+            if (sorteio == 0) {
                 cout << dica1[2];
-            else if (sorteio == 1)
+            }
+            else if (sorteio == 1) {
                 cout << dica2[2];
-            else if (sorteio == 2)
+            }
+            else if (sorteio == 2) {
                 cout << dica3[2];
-            else if (sorteio == 3)
+            }
+            else if (sorteio == 3) {
                 cout << dica4[2];
-            else if (sorteio == 4)
+            }
+            else if (sorteio == 4) {
                 cout << dica5[2];
-            else
+            }
+            else {
                 cout << dica6[2];
+            }
         }
     }
 }
