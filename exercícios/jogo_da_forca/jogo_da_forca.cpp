@@ -79,8 +79,6 @@ int main() {
     else {
 
         cout << "Você errou!\n";
-        cout << "\nA palavra era: " << palavra[sorteio] << endl;
-
 
         if (tentativa == 1) { // depois do 2º erro
             cout << "\nNova dica: ";
@@ -127,9 +125,11 @@ int main() {
             else {
                 cout << dica6[2];
             }
+           
         }
     }
 }
-
+     cout << "\nA palavra era: " << palavra[sorteio] << endl;
+     
      return 0;
 }
