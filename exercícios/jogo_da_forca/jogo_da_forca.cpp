@@ -79,6 +79,7 @@ int main() {
     else {
 
         cout << "Você errou!\n";
+        cout << "\nA palavra era: " << palavra[sorteio] << endl;
 
 
         if (tentativa == 1) { // depois do 2º erro
